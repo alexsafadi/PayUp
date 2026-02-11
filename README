@@ -1,0 +1,104 @@
+# PayTogether
+
+A group payment authorization app where **no one gets charged unless everyone agrees**.
+
+## The Problem
+
+Splitting bills with friends is awkward. Someone pays upfront, then has to chase everyone for money. People forget. Venmo requests pile up. Friendships get strained over $20.
+
+## The Solution
+
+PayTogether uses **all-or-nothing conditional authorization**:
+1. Host creates a payment lobby and sets a deadline
+2. Everyone authorizes their portion upfront
+3. Payment only processes if **everyone** commits by the deadline
+4. If even one person doesn't authorize, **nobody gets charged**
+
+No awkward money requests. No chasing friends. Just simple, fair group payments.
+
+## Features
+
+✅ **All-or-nothing payment logic** - Everyone commits or nobody pays  
+✅ **No app download required** - Works via shareable link in browser  
+✅ **Receipt scanning** - Auto-itemize costs from receipt photos  
+✅ **Multiple payment methods** - Venmo, PayPal, Apple Pay, Google Pay  
+✅ **Real-time tracking** - See who's authorized instantly  
+✅ **Host controls** - Extend deadlines, send reminders, manage participants  
+✅ **Push notifications** - Automatic reminders as deadline approaches  
+✅ **Custom or even splits** - Flexible payment amounts  
+
+## Setup
+
+### Prerequisites
+- Node.js 16+ and npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR-USERNAME/paytogether-app.git
+cd paytogether-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will open at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates an optimized production build in the `dist/` folder.
+
+## Usage
+
+### As a Host
+1. Click "Create a payment lobby"
+2. Enter what you're paying for (e.g., "Dinner at Marea")
+3. Set total amount and choose split type (even or custom)
+4. Add participants
+5. Set deadline
+6. Share the generated link with your group
+7. Track authorizations in real-time
+8. Payment processes only when everyone authorizes
+
+### As a Participant
+1. Click the link shared by the host
+2. Review the payment details
+3. Select your payment method
+4. Authorize your portion
+5. Wait for others to authorize
+6. You'll only be charged if everyone commits
+
+## Tech Stack
+
+- **React** - UI framework
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **Lucide React** - Icons
+
+## Future Enhancements
+
+- Real payment processor integration (Stripe, Plaid)
+- SMS/email notifications
+- Recurring group payments
+- Payment history and analytics
+- Mobile app (iOS/Android)
+
+## License
+
+MIT
+
+## Contributing
+
+Pull requests welcome! Please open an issue first to discuss major changes.
+
+---
+
+Built with ❤️ to make splitting bills with friends less awkward.
